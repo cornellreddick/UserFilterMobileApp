@@ -4,8 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Project/UserFilterApp/app/src/main/res/layout/activity_main.xml" value="0.36614583333333334" />
+        <entry key="..\:/Project/UserFilterApp/app/src/main/res/layout/fragment_sort.xml" value="0.38697916666666665" />
         <entry key="..\:/Project/UserFilterApp/app/src/main/res/layout/fragment_state.xml" value="0.38697916666666665" />
         <entry key="..\:/Project/UserFilterApp/app/src/main/res/layout/fragment_user.xml" value="0.38697916666666665" />
+        <entry key="..\:/Project/UserFilterApp/app/src/main/res/layout/sort_users_layout.xml" value="0.38697916666666665" />
         <entry key="..\:/Project/UserFilterApp/app/src/main/res/layout/user_app_list.xml" value="0.75" />
       </map>
     </option>

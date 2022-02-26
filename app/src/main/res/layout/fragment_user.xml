@@ -24,6 +24,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
+        tools:listitem="@layout/user_app_list"
         android:id="@+id/userListView"
         android:layout_width="381dp"
         android:layout_height="498dp"

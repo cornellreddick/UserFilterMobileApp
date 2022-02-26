@@ -1,5 +1,6 @@
 package com.example.userfilterapp;
 
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -39,8 +40,6 @@ public class StateFragment extends Fragment {
         // Inflate the layout for this fragment
         binding = FragmentStateBinding.inflate(inflater, container, false);
 
-
-
         return binding.getRoot();
     }
 
@@ -71,12 +70,29 @@ public class StateFragment extends Fragment {
         binding.stateListView.setAdapter(arrayAdapter);
         binding.stateListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+
+               stateListener.selectFilteredState(arrayAdapter.getItem(position));
 
             }
         });
-
-
-
     }
+    @Override
+    public void onResume() {
+        super.onResume();
+        getActivity().setTitle("Filter By State");
+    }
+
+    StateListener stateListener;
+
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        stateListener = (StateListener) context;
+    }
+
+    interface StateListener{
+        void selectFilteredState(String state);
+    }
+
 }
